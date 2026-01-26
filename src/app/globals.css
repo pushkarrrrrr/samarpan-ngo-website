@@ -5,12 +5,7 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-playfair: 'Playfair Display', Georgia, serif;
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -25,6 +20,12 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -32,9 +33,51 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
+@layer components {
+  .glass {
+    @apply bg-white/40 backdrop-blur-xl border border-white/30 shadow-xl;
+    will-change: backdrop-filter;
+  }
+
+  .glass-dark {
+    @apply bg-gray-900/40 backdrop-blur-xl border border-gray-800/30 shadow-xl;
+    will-change: backdrop-filter;
+  }
+
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-700;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+
+  .blob {
+    @apply absolute rounded-full blur-[120px] opacity-25 animate-float pointer-events-none;
+    z-index: 0;
+    will-change: transform, opacity;
+  }
+
+  /* Force centering for containers if mx-auto fails in v4 */
+  .container-center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+    display: block;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-playfair);
   font-weight: 700;
   line-height: 1.2;
@@ -51,12 +94,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #f97316;
   border-radius: 5px;
+  border: 2px solid #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb:hover {

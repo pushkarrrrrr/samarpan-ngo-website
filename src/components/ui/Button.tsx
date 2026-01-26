@@ -13,18 +13,18 @@ export const Button: React.FC<ButtonProps> = ({
     className = '',
     ...props
 }) => {
-    const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed';
+    const baseStyles = 'inline-flex items-center justify-center font-bold rounded-xl transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-1';
 
     const variants = {
-        primary: 'bg-primary-500 text-white hover:bg-primary-600 shadow-lg hover:shadow-xl',
-        secondary: 'bg-secondary-500 text-white hover:bg-secondary-600 shadow-lg hover:shadow-xl',
-        outline: 'border-2 border-primary-500 text-primary-500 hover:bg-primary-50',
+        primary: 'bg-premium-gradient text-white shadow-[0_10px_20px_-5px_rgba(249,115,22,0.4)] hover:shadow-[0_20px_25px_-5px_rgba(249,115,22,0.4)]',
+        secondary: 'bg-sky-gradient text-white shadow-[0_10px_20px_-5px_rgba(14,165,233,0.4)] hover:shadow-[0_20px_25px_-5px_rgba(14,165,233,0.4)]',
+        outline: 'border-2 border-primary-500 text-primary-500 hover:bg-primary-50 shadow-sm',
     };
 
     const sizes = {
-        sm: 'px-4 py-2 text-sm',
-        md: 'px-6 py-3 text-base',
-        lg: 'px-8 py-4 text-lg',
+        sm: 'px-5 py-2.5 text-sm',
+        md: 'px-8 py-4 text-base',
+        lg: 'px-10 py-5 text-lg',
     };
 
     return (
