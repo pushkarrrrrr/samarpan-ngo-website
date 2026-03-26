@@ -4,6 +4,7 @@ import React from 'react';
 import { Container } from '@/components/layout/Container';
 import { motion } from 'framer-motion';
 import { FaEye, FaBullseye, FaHistory } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function AboutPage() {
   const values = [
@@ -48,8 +49,8 @@ export default function AboutPage() {
   return (
     <main className="pt-20 bg-slate-50 overflow-hidden">
       {/* Hero Section */}
-      <section className="relative py-32 md:py-48 flex items-center justify-center">
-        <div className="absolute inset-0 bg-night-gradient"></div>
+      <section className="relative py-32 md:py-48 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,#0f172a_0%,#1e3a8a_100%)]"></div>
         <div className="blob bg-primary-500 top-0 left-0 w-96 h-96 opacity-40"></div>
         <div className="blob bg-secondary-500 bottom-0 right-0 w-96 h-96 opacity-30"></div>
 
@@ -61,7 +62,7 @@ export default function AboutPage() {
             className="text-center max-w-4xl mx-auto space-y-8"
           >
             <h1 className="text-6xl md:text-8xl font-display font-black text-white leading-tight tracking-tighter">
-              Our <span className="text-gradient-primary-500">Journey</span> <br /> of Compassion
+              Our <span className="text-gradient-primary">Journey</span> <br /> of Compassion
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto">
               Dedicated to creating a world of equality, opportunity, and hope for every single life we touch.
@@ -105,7 +106,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-10"
+              className="space-y-10 p-8 md:p-12 bg-white/5 rounded-[2.5rem] border border-white/10 backdrop-blur-sm"
             >
               <h2 className="text-5xl md:text-6xl font-display font-black text-white tracking-tight">
                 How It All <span className="text-primary-500">Started</span>
@@ -138,10 +139,12 @@ export default function AboutPage() {
               className="relative"
             >
               <div className="relative z-10 rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white/5 group">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&h=1000&fit=crop"
                   alt="Community meeting"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
               </div>
@@ -154,9 +157,9 @@ export default function AboutPage() {
       {/* Team Section */}
       <section className="py-32">
         <Container>
-          <div className="text-center max-w-3xl mx-auto mb-24 space-y-4">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
             <h2 className="text-5xl font-display font-black text-gray-900 tracking-tight">
-              Meet Our <span className="text-gradient-primary-500">Visionaries</span>
+              Meet Our <span className="text-gradient-primary">Visionaries</span>
             </h2>
             <p className="text-lg text-gray-600 font-medium">
               The heart and soul of Samarpan—dedicated individuals driving real change on the ground.
@@ -174,10 +177,12 @@ export default function AboutPage() {
                 className="group relative"
               >
                 <div className="relative mb-8 rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl border-4 border-white group-hover:border-primary-500 transition-colors duration-500">
-                  <img
+                  <Image
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                     <div className="flex space-x-4">

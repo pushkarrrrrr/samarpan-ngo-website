@@ -1,7 +1,8 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
 
 :root {
-  --background: #ffffff;
+  --background: #f0f9ff;
   --foreground: #171717;
 }
 
@@ -40,25 +41,49 @@ body {
 
 @layer components {
   .glass {
-    @apply bg-white/40 backdrop-blur-xl border border-white/30 shadow-xl;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     will-change: backdrop-filter;
   }
 
   .glass-dark {
-    @apply bg-gray-900/40 backdrop-blur-xl border border-gray-800/30 shadow-xl;
+    background-color: rgba(17, 24, 39, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(31, 41, 55, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     will-change: backdrop-filter;
   }
 
   .text-gradient-primary {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-700;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #f97316, #c2410c);
   }
 
   .section-padding {
-    @apply py-20 md:py-32;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
   }
 
   .blob {
-    @apply absolute rounded-full blur-[120px] opacity-25 animate-float pointer-events-none;
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(120px);
+    opacity: 0.25;
+    animation: float 8s ease-in-out infinite;
+    pointer-events: none;
     z-index: 0;
     will-change: transform, opacity;
   }

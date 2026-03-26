@@ -16,9 +16,9 @@ export const Button: React.FC<ButtonProps> = ({
     const baseStyles = 'inline-flex items-center justify-center font-bold rounded-xl transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-1';
 
     const variants = {
-        primary: 'bg-premium-gradient text-white shadow-[0_10px_20px_-5px_rgba(249,115,22,0.4)] hover:shadow-[0_20px_25px_-5px_rgba(249,115,22,0.4)]',
+        primary: 'bg-[linear-gradient(135deg,#f97316_0%,#ea580c_100%)] text-white shadow-[0_10px_20px_-5px_rgba(249,115,22,0.4)] hover:shadow-[0_20px_25px_-5px_rgba(249,115,22,0.4)]',
         secondary: 'bg-sky-gradient text-white shadow-[0_10px_20px_-5px_rgba(14,165,233,0.4)] hover:shadow-[0_20px_25px_-5px_rgba(14,165,233,0.4)]',
-        outline: 'border-2 border-primary-500 text-primary-500 hover:bg-primary-50 shadow-sm',
+        outline: 'border-2 border-gray-900 text-gray-900 bg-white/80 hover:bg-white hover:border-black shadow-sm',
     };
 
     const sizes = {

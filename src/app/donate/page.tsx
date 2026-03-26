@@ -4,7 +4,7 @@ import React from 'react';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
-import { FaHeart, FaChild, FaHospital, FaHome, FaQrcode } from 'react-icons/fa';
+import { FaHeart, FaChild, FaHome, FaQrcode } from 'react-icons/fa';
 
 export default function DonatePage() {
     const causes = [
@@ -47,7 +47,7 @@ export default function DonatePage() {
                         className="text-center max-w-4xl mx-auto space-y-8"
                     >
                         <h1 className="text-7xl md:text-9xl font-display font-black text-white leading-tight tracking-tighter">
-                            Your <span className="text-gradient-primary-500">Gift</span>, <br /> Their Future
+                            Your <span className="text-gradient-primary">Gift</span>, <br /> Their Future
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto opacity-90">
                             Join us in our mission to empower underprivileged communities through your generous contributions.
@@ -63,7 +63,7 @@ export default function DonatePage() {
                 <Container>
                     <div className="text-center max-w-3xl mx-auto mb-24 space-y-6">
                         <h2 className="text-5xl md:text-7xl font-display font-black text-gray-900 tracking-tight">
-                            Choose a <span className="text-gradient-primary-500">Cause</span>
+                            Choose a <span className="text-gradient-primary">Cause</span>
                         </h2>
                         <p className="text-2xl text-gray-600 font-medium leading-relaxed">
                             Your contribution goes directly to our grassroots programs and transforms lives.
@@ -115,7 +115,7 @@ export default function DonatePage() {
                             <div className="space-y-16">
                                 <div className="space-y-6">
                                     <h2 className="text-6xl md:text-8xl font-display font-black text-white leading-none">
-                                        Simple <br /> Ways <br /> to <span className="text-gradient-primary-500">Donate</span>
+                                        Simple <br /> Ways <br /> to <span className="text-gradient-primary">Donate</span>
                                     </h2>
                                     <div className="h-3 w-40 bg-primary-500 rounded-full"></div>
                                 </div>
@@ -192,7 +192,7 @@ export default function DonatePage() {
 
                         <div className="space-y-8">
                             <h2 className="text-6xl md:text-8xl font-display font-black text-gray-900 tracking-tight leading-tight">
-                                Transparency <br /> <span className="text-gradient-primary-500">Matters</span>
+                                Transparency <br /> <span className="text-gradient-primary">Matters</span>
                             </h2>
                             <p className="text-2xl md:text-3xl text-gray-600 font-medium leading-relaxed max-w-4xl mx-auto">
                                 We ensure 100% of your donation reaches the community. Monthly impact reports and audited financials are available for our donors to track their impact.

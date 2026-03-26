@@ -6,6 +6,7 @@ import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
 import { FaGraduationCap, FaHeart, FaHandsHelping, FaUsers } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function HomePage() {
   const stats = [
@@ -40,7 +41,7 @@ export default function HomePage() {
   ];
 
   return (
-    <main className="overflow-hidden bg-slate-50">
+    <main className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20">
         <div className="blob bg-primary-300 top-20 -left-20 w-96 h-96 opacity-30"></div>
@@ -64,7 +65,7 @@ export default function HomePage() {
 
               <h1 className="text-6xl md:text-8xl font-display font-black leading-tight text-gray-900 tracking-tighter">
                 Making a <br />
-                <span className="text-gradient-primary-500">Difference</span> <br />
+                <span className="text-gradient-primary">Difference</span> <br />
                 Together
               </h1>
 
@@ -89,10 +90,12 @@ export default function HomePage() {
               className="relative"
             >
               <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=1000&fit=crop"
                   alt="Children smiling"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
@@ -158,7 +161,7 @@ export default function HomePage() {
               Our Core <span className="text-primary-600">Focus</span>
             </h2>
             <p className="text-lg text-gray-600 font-medium">
-              We operate where it's needed most, focused on three sustainable pillars of development.
+              We operate where it&apos;s needed most, focused on three sustainable pillars of development.
             </p>
           </div>
 
@@ -172,10 +175,12 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="group relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl"
               >
-                <img
+                <Image
                   src={program.image}
                   alt={program.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${program.gradient} opacity-80 mix-blend-multiply`}></div>
                 <div className="absolute inset-0 p-10 flex flex-col justify-end text-white space-y-4">
@@ -199,17 +204,17 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding">
+      <section className="section-padding mt-40 md:mt-60">
         <Container>
-          <div className="relative bg-night-gradient rounded-[4rem] p-12 md:p-24 overflow-hidden shadow-[0_30px_60px_-15px_rgba(15,23,42,0.5)]">
+          <div className="relative bg-[linear-gradient(135deg,#0f172a_0%,#1e3a8a_100%)] rounded-[4rem] p-12 md:p-24 overflow-hidden shadow-[0_30px_60px_-15px_rgba(15,23,42,0.5)]">
             <div className="blob bg-primary-500 -top-20 -right-20 w-80 h-80 opacity-40"></div>
             <div className="blob bg-secondary-500 -bottom-20 -left-20 w-80 h-80 opacity-40"></div>
 
-            <div className="relative z-10 max-w-3xl mx-auto text-center space-y-12">
-              <h2 className="text-5xl md:text-7xl font-display font-black text-white leading-tight">
+            <div className="relative z-10 max-w-3xl mx-auto text-center space-y-8">
+              <h2 className="text-5xl md:text-7xl font-display font-black text-white leading-tight mb-4">
                 Ready to Change <br /> a Life Today?
               </h2>
-              <p className="text-xl text-gray-300 font-medium">
+              <p className="text-xl text-gray-300 font-medium mb-8">
                 Your support is the catalyst for change. Small steps leading to giant leaps for the communities we serve.
               </p>
               <div className="flex flex-wrap justify-center gap-6">

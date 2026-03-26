@@ -4,6 +4,7 @@ import React from 'react';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function GalleryPage() {
     const images = [
@@ -93,10 +94,12 @@ export default function GalleryPage() {
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 className="group relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white hover:border-primary-500 transition-all duration-500"
                             >
-                                <img
+                                <Image
                                     src={image.url}
                                     alt={image.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
                                     <span className="text-primary-500 text-xs font-black uppercase tracking-widest mb-2">{image.category}</span>
@@ -122,7 +125,7 @@ export default function GalleryPage() {
                         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
                             <div className="max-w-2xl text-center lg:text-left space-y-6">
                                 <h2 className="text-5xl md:text-6xl font-display font-black text-gray-900 tracking-tight">
-                                    Be Part of the <span className="text-gradient-primary-500">Story</span>
+                                    Be Part of the <span className="text-gradient-primary">Story</span>
                                 </h2>
                                 <p className="text-xl text-gray-600 font-medium leading-relaxed">
                                     We are always looking for passionate people to join us and help capture more smiles and create lasting impact.

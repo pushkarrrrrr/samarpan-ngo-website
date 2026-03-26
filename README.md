@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Samarpan NGO - Empowering Communities
 
-## Getting Started
+A modern, high-performance web platform built for **Samarpan NGO**, an organization dedicated to empowering underprivileged communities through education, healthcare, and sustainable development initiatives. 
 
-First, run the development server:
+The website is designed with a premium, engaging aesthetic featuring smooth scroll interactions, custom typography, glassmorphism, and dynamic micro-animations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **UI Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Language**: TypeScript
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Premium UI/UX**: Custom-designed themes using Next-Gen Tailwind CSS v4 (`primary`, `secondary`, and `accent` cohesive color palettes) mixed with glassmorphic cards and floating gradients.
+- **Dynamic Animations**: Smooth scroll-triggered fade-ins and scale animations leveraging Framer Motion.
+- **Image Optimization**: Automatically optimizes external asset delivery via Next.js `<Image />` (`next/image`) for superior Core Web Vitals (LCP).
+- **Interactive Forms**: A modern contact form structure integrated directly into the UI.
+- **Responsive Layout**: Fluid design system cleanly optimized for mobile to desktop viewports.
 
-## Learn More
+## 📂 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/` - Core routing pages including Home, About, Contact, Donate, Programs, and Gallery.
+- `src/components/ui/` - Reusable UI components (like the custom polymorphic `Button`).
+- `src/components/layout/` - Global layout wrappers (`Header`, `Footer`, `Container`).
+- `tailwind.config.ts` & `src/app/globals.css` - Custom design system tokens and variables driving the entire visual identity.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
+Make sure you have Node.js 20 or later installed.
 
-## Deploy on Vercel
+### Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository and navigate into the directory:
+   ```bash
+   git clone <repository-url>
+   cd samarpan-ngo
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the outcome.
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page or submit a Pull Request.
+
+## 📝 License
+This project is proprietary and explicitly built for the Samarpan NGO platform.

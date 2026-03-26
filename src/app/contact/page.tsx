@@ -54,10 +54,10 @@ export default function ContactPage() {
                         className="text-center max-w-4xl mx-auto space-y-8"
                     >
                         <h1 className="text-6xl md:text-8xl font-display font-black text-white leading-tight tracking-tighter">
-                            Let's <span className="text-gray-900">Connect</span>
+                            Let&apos;s <span className="text-gray-900">Connect</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white font-medium leading-relaxed max-w-2xl mx-auto opacity-90">
-                            Have questions or want to collaborate? We'd love to hear from you.
+                            Have questions or want to collaborate? We&apos;d love to hear from you.
                         </p>
                     </motion.div>
                 </Container>
@@ -100,7 +100,7 @@ export default function ContactPage() {
                             className="lg:col-span-2 glass rounded-[3rem] p-10 md:p-16 shadow-2xl relative overflow-hidden"
                         >
                             <div className="relative z-10">
-                                <h2 className="text-4xl font-display font-black text-gray-900 mb-10">Send a <span className="text-gradient-primary-500">Message</span></h2>
+                                <h2 className="text-4xl font-display font-black text-gray-900 mb-10">Send a <span className="text-gradient-primary">Message</span></h2>
                                 <form action="https://formspree.io/f/maykeqre" method="POST" className="grid md:grid-cols-2 gap-8">
                                     <div className="space-y-4">
                                         <label className="block text-sm font-black text-gray-700 uppercase tracking-widest">Full Name</label>
